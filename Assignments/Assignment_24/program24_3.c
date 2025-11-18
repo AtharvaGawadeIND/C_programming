@@ -76,7 +76,6 @@ int main()
 
     printf("Difference between largest and smallest number is : %d\n", iRet);
 
-
     
     free(iPtr);
 
