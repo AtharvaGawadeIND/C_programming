@@ -56,7 +56,7 @@ int main()
     printf("Enter number of elements : \n");
     scanf("%d", &iLength);
 
-    // Step 1 : Allocate the memory
+    
     iPtr = (IPTR)malloc(iLength * sizeof(int));
 
     if (NULL == iPtr)
@@ -71,12 +71,13 @@ int main()
         scanf("%d", &iPtr[iCnt]);
     }
 
-    // Step 2 : Use the memory
+    
     iRet = Difference(iPtr, iLength);
 
     printf("Difference between largest and smallest number is : %d\n", iRet);
 
-    // Step 3 : Free the memory
+
+    
     free(iPtr);
 
     return 0;
