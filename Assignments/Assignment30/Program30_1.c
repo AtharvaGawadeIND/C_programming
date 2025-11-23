@@ -9,7 +9,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 //
 //  Function Name   : Pattern
-//  Description     : It prints a unique square matrix                  
+//  Description     : It prints a unique square matrix                 
 //  Input           : Int, Int
 //  Output          : Void
 //  Author          : Atharva Vinod Gawade
@@ -45,7 +45,7 @@ void Pattern(int iRow , int iCol)
     }
 } // End of Pattern
 
-//  Time Complexity : O(N^2)
+//  Time Complexity : O(n**2)
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //

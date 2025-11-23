@@ -46,7 +46,7 @@ void Pattern(int iRow, int iCol)
     }
 } // End of Pattern
 
-//  Time Complexity : O(N^2)
+//  Time Complexity :O(n**2)
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //

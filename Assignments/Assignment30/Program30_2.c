@@ -10,8 +10,7 @@
 //
 //  Function Name   : Pattern
 //  Title           : Prints unique square matrix
-//  Description     : It prints a unique square matrix where '*' gradually
-//                    changes to '#' from the right side
+//  Description     : It prints a unique square matrix 
 //  Input           : Int, Int
 //  Output          : Void
 //  Author          : Atharva Vinod Gawade
@@ -34,7 +33,7 @@ void Pattern(int iRow, int iCol)
     {
         for(j = 1; j <= iCol; j++)
         {
-            if(j <= (iCol - i + 1))     // ✅ YOUR PREVIOUS LOGIC RESTORED
+            if(j <= (iCol - i + 1))    
             {
                 printf("*\t");
             }
@@ -47,7 +46,7 @@ void Pattern(int iRow, int iCol)
     }
 } // End of Pattern
 
-//  Time Complexity : O(N^2)
+//  Time Complexity :O(n**2)
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //
