@@ -10,7 +10,8 @@
 //
 //  Function Name   : Pattern
 //  Title           : Prints unique square matrix
-//  Description     : It prints a matrix where each row contains the same number
+//  Description     : It prints a unique square matrix where '*' gradually
+//                    changes to '#' from the right side
 //  Input           : Int, Int
 //  Output          : Void
 //  Author          : Atharva Vinod Gawade
@@ -18,23 +19,35 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////
 
-void Pattern(int iRow , int iCol)
+void Pattern(int iRow, int iCol)
 {
-    int i = 0;
-    int j = 0;
+    int i = 0, j = 0;
 
-    for(i = iRow; i >= 1; i--)
+    if(iRow != iCol)
+    {
+        printf("Invalid Input\n");
+        printf("Row number and column number should be same\n");
+        return;
+    }
+
+    for(i = 1; i <= iRow; i++)
     {
         for(j = 1; j <= iCol; j++)
         {
-            printf("%d\t", i);
+            if(j <= (iCol - i + 1))     // ✅ YOUR PREVIOUS LOGIC RESTORED
+            {
+                printf("*\t");
+            }
+            else
+            {
+                printf("#\t");
+            }
         }
         printf("\n");
     }
 } // End of Pattern
 
-//  Time Complexity : O(n*m)
-//                  :O(n**2)
+//  Time Complexity : O(N^2)
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //
@@ -44,32 +57,35 @@ void Pattern(int iRow , int iCol)
 
 int main()
 {
+    int iValue1 = 0, iValue2 = 0;
 
-    int iValue1 = 0 , iValue2 = 0 ;
+    printf("Enter the number of rows and columns: ");
+    scanf("%d %d", &iValue1, &iValue2);
 
-    printf("Enter the number of rows and columns\n");
-    scanf("%d %d", &iValue1 , &iValue2);
+    Pattern(iValue1, iValue2);
 
-    Pattern(iValue1 , iValue2);
-
-    return 0 ;
+    return 0;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //
 //  Testcases handled successfully by the application
 //
-//  Input : 4 3
-//  Output:
-//      4   4   4
-//      3   3   3
-//      2   2   2
-//      1   1   1
+//  Input : 4 4
+//  Output :
+//      *   *   *   *
+//      *   *   *   #
+//      *   *   #   #
+//      *   #   #   #
 //
-//  Input : 3 5
-//  Output:
-//      3   3   3   3   3
-//      2   2   2   2   2
-//      1   1   1   1   1
+//      # appears gradually from right side
 //
+//  Input : 5 5
+//  Output :
+//      *   *   *   *   *
+//      *   *   *   *   #
+//      *   *   *   #   #
+//      *   *   #   #   #
+//      *   #   #   #   #
+
 ///////////////////////////////////////////////////////////////////////////////////////

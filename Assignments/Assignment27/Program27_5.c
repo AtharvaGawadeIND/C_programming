@@ -1,32 +1,75 @@
+///////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header files
+//
+///////////////////////////////////////////////////////////////////////////////////////
+
 #include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   : Pattern
+//  Title           : Prints unique square matrix
+//  Description     : It prints a matrix where each row contains the same numbre
+//  Input           : Int, Int
+//  Output          : Void
+//  Author          : Atharva Vinod Gawade
+//  Date            : 23/11/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////
 
 void Pattern(int iRow , int iCol)
 {
     int i = 0;
-    int j  = 0;
+    int j = 0;
 
-    for(i =1 ; i<=(iRow +1)  ;i++)
+    for(i = 1 ; i <= (iRow + 1) ; i++)
     {
-        for(j = 1 ; j<=iCol ; j++)
+        for(j = 1 ; j <= iCol ; j++)
         {
-            
-            printf("%d\t",i);
-           
+            printf("%d\t", i);
         }
         printf("\n");
     }
+} // End of Pattern
 
-}
+//  Time Complexity : O(n*m)
+//                  :O(n**2)
+
+///////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+///////////////////////////////////////////////////////////////////////////////////////
 
 int main()
 {
 
     int iValue1 = 0 , iValue2 = 0 ;
 
-    printf("Enter the number of rows and columns");
+    printf("Enter the number of rows and columns\n");
     scanf("%d %d", &iValue1 , &iValue2);
 
     Pattern(iValue1 , iValue2);
 
     return 0 ;
 }
+
+///////////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases handled successfully by the application
+//
+//  Input : 3 4
+//  Output:
+//      1   1   1   1
+//      2   2   2   2
+//      3   3   3   3
+//      4   4   4   4
+//
+//  Input : 2 5
+//  Output:
+//      1   1   1   1   1
+//      2   2   2   2   2
+//      3   3   3   3   3
+//
+///////////////////////////////////////////////////////////////////////////////////////
