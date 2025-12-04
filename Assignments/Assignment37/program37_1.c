@@ -1,0 +1,86 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Required header files
+// 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+#include<stdbool.h>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Function Name : ChkChar
+//  Description :   It returns if given character is present
+//  Input :         char *
+//  Output :        bool
+//  Author :        Atharva Vinod Gawade
+//  Date :          5/12/2025
+// 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+bool ChkChar(char *str, char ch)
+{
+    while(*str != '\0')
+    {
+       if(*str==ch)
+       {
+            return true;
+       }
+       str++;
+    }
+    return false;
+}   // End of ChkChar
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Entry point function for the application
+// 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[20] = {'\0'};
+    char ch = '\0';
+    bool bRet = false;
+
+    printf("Enter string:\n");
+    scanf("%[^'\n']s",Arr);
+
+    printf("Enter character:\n");
+    scanf(" %c",&ch);
+
+    bRet = ChkChar(Arr,ch);
+
+    if (bRet == true)
+    {
+        printf("Character present\n");
+    }
+    else
+    {
+        printf("Character not present\n");
+    }
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Testcases successfully handled by the application
+//
+//  Input:
+//  Enter string:
+//  marvellous 
+//  Enter character:
+//  w
+//  Output:
+//  Character not present
+//
+//  Input:
+//  Enter string:
+//  marvellous 
+//  Enter character:
+//  m
+//  Output:
+//  Character present
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
