@@ -1,0 +1,85 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Required header files
+// 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+#include<stdbool.h>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Function Name : Display
+//  Description :   It returns true if input character belongs to (!,@,#,$,%,^,&,*) 
+//  Input :         char
+//  Output :        bool
+//  Author :        Atharva Vinod Gawade
+//  Date :          30/11/2025
+// 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+bool ChkSpecial(char ch)
+{
+    if ((ch=='!') || (ch=='@') || (ch=='#') || (ch=='$') || (ch=='%') || (ch=='^') ||(ch=='&') || (ch=='*'))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}   // End of ChkSpecial
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Entry point function for the application
+// 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char cValue = {'\0'};
+    bool bRet = false;
+
+    printf("Enter character:\n");
+    scanf("%c",&cValue);
+
+    bRet = ChkSpecial(cValue);
+
+    if(bRet == true)
+    {
+        printf("It is a special character\n");
+    }
+    else
+    {
+        printf("It is not a special character\n");
+    }
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//  Testcases successfully handled by the application
+//
+//  Input:
+//  Enter character:
+//  3
+//  Output: It is not a special character
+//
+//  Input:
+//  Enter character:
+//  A
+//  Output: It is not a special character
+//
+//  Input:
+//  Enter character:
+//  %
+//  Output: It is a special character
+//
+//  Input:
+//  Enter character:
+//  !
+//  Output: It is a special character
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
